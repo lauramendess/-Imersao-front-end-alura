@@ -155,8 +155,8 @@
   
   .cards {
     position: relative; 
-    width: 220px;
-    height: 200px;
+    width: 180px;
+    height: 180px;
     overflow: hidden;
     border-radius: 8px;
   }
@@ -243,6 +243,16 @@
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     min-width: 767px;
+    max-height: 53vh;
+    overflow-y: auto;
+  }
+
+  .grid-container::-webkit-scrollbar {
+    width: 1px;
+  }
+  
+  .grid-container::-webkit-scrollbar-thumb {
+    background-color: transparent;
   }
   
   .artist-card {
@@ -254,7 +264,8 @@
     padding: 16px;
     position: relative;
     transition: background-color 0.3s ease;
-    width: 100%;
+    width: auto;
+    overflow: auto;
   }
   
   .artist-card:hover {
